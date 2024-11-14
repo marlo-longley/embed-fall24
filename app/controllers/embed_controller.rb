@@ -8,7 +8,7 @@ class EmbedController < ApplicationController
   etag { Rails.application.importmap.digest(resolver: helpers) if request.format&.html? }
 
   before_action :embed_request
-  before_action :set_cache, only: %i[iiif]
+  # before_action :set_cache, only: %i[iiif]
   before_action :fix_etag_header, only: %i[get iframe]
   before_action :allow_iframe, only: %i[iiif iframe]
 

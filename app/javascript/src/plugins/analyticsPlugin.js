@@ -9,7 +9,7 @@ function* onSetCanvas({ type, windowId, canvasId }) {
   // Cannot destructure property 'id' of '(intermediate value)' as it is undefined.
   // const { id: manifestId } = yield select(getManifest, { windowId });
   // Assume that windowIds is an array of window IDs
-    const windowIds = yield select(getWindowIds); // Replace with your actual selector
+    // const windowIds = yield select(getWindowIds); // Replace with your actual selector
 
     // Filter out null IDs
     const validWindowIds = windowIds.filter(id => id !== null);
